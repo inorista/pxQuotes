@@ -49,7 +49,7 @@ class MainScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 0.7.sh,
+              height: 0.72.sh,
               width: 1.sw,
               child: BlocBuilder<CardQuotesBloc, CardQuotesState>(
                 builder: (context, state) {
@@ -86,7 +86,7 @@ class MainScreen extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: 0.3.sw,
+                horizontal: 0.2.sw,
                 vertical: 30,
               ),
               child: Container(
@@ -169,6 +169,20 @@ class MainScreen extends StatelessWidget {
                             );
                       },
                     ),
+                    ActionItem(
+                      icon: Icon(
+                        EvaIcons.downloadOutline,
+                        color: listColor[12],
+                      ),
+                      callback: () async {
+                        final timeCreated = "Scan ${DateFormat("dd.MM.yyyy - hh.mma").format(DateTime.now())}.jpg";
+                        context.read<ShareScanResultBloc>().add(
+                              ShareScanResult(
+                                fileName: timeCreated,
+                              ),
+                            );
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -213,9 +227,9 @@ class CardWidget extends StatelessWidget {
                   children: [
                     Positioned.fill(
                       child: Image.asset(
-                        "assets/images/pattern.png",
+                        quote.imageUrl ?? "assets/images/pattern.png",
                         color: Colors.white.withOpacity(0.2),
-                        fit: BoxFit.fill,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Positioned(
@@ -288,14 +302,19 @@ class CardWidget extends StatelessWidget {
                     Positioned(
                       bottom: 10,
                       right: 30,
-                      child: Text(
-                        "/ Powered by Ngo Quoc Tu",
-                        style: AppStyle.quoteStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            """/ Powered by Quoc Tu""",
+                            style: AppStyle.quoteStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

@@ -22,6 +22,7 @@ class QuotesApi {
       for (int i = 0; i < temp.length; i++) {
         temp[i].color1 = listColor[random.nextInt(listColor.length)];
         temp[i].color2 = listColor[random.nextInt(listColor.length)];
+        temp[i].imageUrl = listImages[random.nextInt(listImages.length)];
       }
       return temp;
     } else {

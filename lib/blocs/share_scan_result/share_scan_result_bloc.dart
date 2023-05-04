@@ -4,9 +4,11 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pxquotes/models/quote_model.dart';
+import 'package:pxquotes/utils/method_utils.dart';
 import 'package:screenshot/screenshot.dart';
 
 part 'share_scan_result_event.dart';
@@ -27,8 +29,11 @@ class ShareScanResultBloc extends Bloc<ShareScanResultEvent, ShareScanResultStat
           file.writeAsBytesSync(value);
         }
       });
-      final color1 = "#${(currentModel.color1.toString().split('(0x')[1].split(')')[0]).toLowerCase()}";
-      final color2 = "#${(currentModel.color2.toString().split('(0x')[1].split(')')[0]).toLowerCase()}";
+
+      final color1 =
+          "#${(MethodUtils().darken(currentModel.color1!, amount: 0.05).toString().split('(0x')[1].split(')')[0]).toLowerCase()}";
+      final color2 =
+          "#${(MethodUtils().darken(currentModel.color2!, amount: 0.05).toString().split('(0x')[1].split(')')[0]).toLowerCase()}";
 
       final Map<String, dynamic> data = {
         "imagePath": event.fileName,

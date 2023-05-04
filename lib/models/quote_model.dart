@@ -11,7 +11,7 @@ class QuoteModel {
   String? dateModified;
   Color? color1;
   Color? color2;
-
+  String? imageUrl;
   QuoteModel({
     this.sId,
     this.content,
@@ -23,6 +23,7 @@ class QuoteModel {
     this.dateModified,
     this.color1,
     this.color2,
+    this.imageUrl,
   });
 
   QuoteModel.fromJson(Map<String, dynamic> json) {
@@ -34,6 +35,7 @@ class QuoteModel {
     length = json['length'];
     dateAdded = json['dateAdded'];
     dateModified = json['dateModified'];
+    imageUrl = json['imageUrl'];
   }
 
   Map<String, dynamic> toJson() {
@@ -46,6 +48,7 @@ class QuoteModel {
     data['length'] = length;
     data['dateAdded'] = dateAdded;
     data['dateModified'] = dateModified;
+    data['imageUrl'] = imageUrl;
     return data;
   }
 }

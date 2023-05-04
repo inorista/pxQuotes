@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-const Color mainColor = Color.fromARGB(255, 172, 172, 172);
-
+const Color mainColor = Color.fromARGB(255, 203, 203, 203);
+const List<String> listImages = [
+  "assets/images/pattern.png",
+  "assets/images/pattern2.png",
+  "assets/images/pattern3.png",
+  "assets/images/pattern4.png",
+  "assets/images/pattern5.png",
+  "assets/images/pattern6.png",
+];
 const List<Color> listColor = [
   Color(0xffC69F6A),
   Color(0xff54695E),

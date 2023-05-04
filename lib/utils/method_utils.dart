@@ -18,4 +18,14 @@ class MethodUtils {
         padding: padding,
         margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       );
+
+  // DARKEN COLOR
+  Color darken(Color color, {double amount = .1}) {
+    assert(amount >= 0 && amount <= 1);
+
+    final hsl = HSLColor.fromColor(color);
+    final hslDark = hsl.withLightness((hsl.lightness - amount).clamp(0.0, 1.0));
+
+    return hslDark.toColor();
+  }
 }
