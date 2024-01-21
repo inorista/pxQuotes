@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pxquotes/constants/app_style.dart';
+import 'package:pxquote/constants/app_style.dart';
 
 @override
 class SplashScreen extends StatefulWidget {

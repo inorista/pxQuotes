@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:pxquotes/models/quote_model.dart';
-import 'package:pxquotes/resources/quotes_api.dart';
+import 'package:pxquote/models/quote_model.dart';
+import 'package:pxquote/resources/quotes_api.dart';
 
 part 'card_quotes_event.dart';
 part 'card_quotes_state.dart';

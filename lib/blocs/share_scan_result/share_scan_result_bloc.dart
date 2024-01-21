@@ -4,11 +4,10 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:pxquotes/models/quote_model.dart';
-import 'package:pxquotes/utils/method_utils.dart';
+import 'package:pxquote/models/quote_model.dart';
+import 'package:pxquote/utils/method_utils.dart';
 import 'package:screenshot/screenshot.dart';
 
 part 'share_scan_result_event.dart';

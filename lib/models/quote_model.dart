@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:screenshot/screenshot.dart';
 
 class QuoteModel {
+  final ScreenshotController screenshotController = ScreenshotController();
   String? sId;
   String? content;
   String? author;

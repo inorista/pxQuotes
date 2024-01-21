@@ -30,8 +30,23 @@
 		<string>instagram-capture</string>
 		<string>fsq+kylm3gjcbtswk4rambrt4uyzq1dqcoc0n2hyjgcvbcbe54rj+post</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>643432537207226</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>FacebookAppID</key>
+	<string>643432537207226</string>
+	<key>FacebookClientToken</key>
+	<string>8c1ac42e7be5ca012bd7a49aa618dc38</string>
+	<key>FacebookDisplayName</key>
+	<string>pxQuotes</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram-stories</string>

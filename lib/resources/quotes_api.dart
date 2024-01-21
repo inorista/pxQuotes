@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:dio/dio.dart';
-import 'package:pxquotes/constants/gradient_color.dart';
-import 'package:pxquotes/models/exception_model.dart';
-import 'package:pxquotes/models/quote_model.dart';
+import 'package:pxquote/constants/gradient_color.dart';
+import 'package:pxquote/models/exception_model.dart';
+import 'package:pxquote/models/quote_model.dart';
 
 class QuotesApi {
   final Dio dio = Dio();
